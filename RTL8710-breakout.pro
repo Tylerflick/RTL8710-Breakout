@@ -1,4 +1,4 @@
-update=Saturday, January 28, 2017 'PMt' 09:42:32 PM
+update=Monday, January 30, 2017 'PMt' 08:59:44 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,7 +59,5 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=/home/tyler/Development/kicad/libraries/kicad-ESP8266/ESP8266
-LibName32=Libs/RTL01-V1
-LibName33=/home/tyler/Development/kicad/libraries/KiCad-Libraries/symbols/PowerComponents
-LibName34=Libs/LM1117
+LibName31=Libs/RTL01-V1
+LibName32=Libs/LM1117

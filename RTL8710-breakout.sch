@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:RTL8710-breakout-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -124,17 +125,6 @@ F 3 "" H 3250 3000 50  0000 C CNN
 	1    3250 3000
 	0    1    1    0   
 $EndComp
-$Comp
-L RTL01-V1 U1
-U 1 1 588D83EC
-P 4850 4050
-F 0 "U1" H 4850 3950 50  0000 C CNN
-F 1 "RTL01-V1" H 4850 4150 50  0000 C CNN
-F 2 "RTL8710:RTL01-V1" H 4850 4050 50  0001 C CNN
-F 3 "" H 4850 4050 50  0001 C CNN
-	1    4850 4050
-	1    0    0    -1  
-$EndComp
 Text Label 3350 3200 2    60   ~ 0
 SWDIO
 $Comp
@@ -229,8 +219,6 @@ Wire Wire Line
 Wire Wire Line
 	3950 4150 3450 4150
 Wire Wire Line
-	3350 4350 3950 4350
-Wire Wire Line
 	5750 3750 6450 3750
 Wire Wire Line
 	5750 3850 6450 3850
@@ -252,7 +240,7 @@ Wire Wire Line
 	3700 1900 3700 1850
 Connection ~ 3700 1850
 Wire Wire Line
-	2550 2150 3950 2150
+	2550 2150 4300 2150
 Wire Wire Line
 	3950 2150 3950 2050
 Wire Wire Line
@@ -281,9 +269,7 @@ Wire Wire Line
 Wire Wire Line
 	3450 4050 3000 4050
 Wire Wire Line
-	3350 4350 3350 4150
-Wire Wire Line
-	3350 4150 3000 4150
+	3000 4150 3400 4150
 Wire Wire Line
 	4700 5000 4700 4950
 Wire Wire Line
@@ -307,29 +293,13 @@ Wire Wire Line
 Wire Wire Line
 	6200 4550 6450 4550
 Wire Wire Line
-	4600 4950 3250 4950
+	3000 4250 3350 4250
 Wire Wire Line
-	3250 4950 3250 4250
+	3000 4350 3300 4350
 Wire Wire Line
-	3250 4250 3000 4250
+	3000 4450 3250 4450
 Wire Wire Line
-	3000 4350 3200 4350
-Wire Wire Line
-	3200 4350 3200 5000
-Wire Wire Line
-	3200 5000 4700 5000
-Wire Wire Line
-	4800 5050 3150 5050
-Wire Wire Line
-	3150 5050 3150 4450
-Wire Wire Line
-	3150 4450 3000 4450
-Wire Wire Line
-	3000 4550 3100 4550
-Wire Wire Line
-	3100 4550 3100 5100
-Wire Wire Line
-	3100 5100 4900 5100
+	3000 4550 3200 4550
 $Comp
 L CONN_01X02 P5
 U 1 1 588FFE99
@@ -395,5 +365,91 @@ F 2 "" H 5100 5450 50  0000 C CNN
 F 3 "" H 5100 5450 50  0000 C CNN
 	1    5100 5450
 	0    1    1    0   
+$EndComp
+Text Label 3000 3750 0    60   ~ 0
+GC2
+Text Label 3000 3850 0    60   ~ 0
+GC5
+Text Label 3000 3950 0    60   ~ 0
+CHIP_EN
+Text Label 3000 4050 0    60   ~ 0
+GE1
+Wire Wire Line
+	3950 4350 3400 4350
+Wire Wire Line
+	3400 4350 3400 4150
+Wire Wire Line
+	3350 4250 3350 4950
+Wire Wire Line
+	3350 4950 4600 4950
+Wire Wire Line
+	4700 5000 3300 5000
+Wire Wire Line
+	3300 5000 3300 4350
+Wire Wire Line
+	3250 4450 3250 5050
+Wire Wire Line
+	3250 5050 4800 5050
+Wire Wire Line
+	3200 4550 3200 5100
+Wire Wire Line
+	3200 5100 4900 5100
+Text Label 3000 4150 0    60   ~ 0
+GE2
+Text Label 3000 4250 0    60   ~ 0
+GA2
+Text Label 3000 4350 0    60   ~ 0
+GC4
+Text Label 3000 4450 0    60   ~ 0
+GA5
+Text Label 3000 4550 0    60   ~ 0
+GA1
+Text Label 6250 3750 0    60   ~ 0
+GB0
+Text Label 6250 3850 0    60   ~ 0
+GB1
+Text Label 6250 3950 0    60   ~ 0
+GC1
+Text Label 6250 4050 0    60   ~ 0
+GC3
+Text Label 6250 4150 0    60   ~ 0
+GC0
+Text Label 6250 4250 0    60   ~ 0
+GA4
+Text Label 6250 4350 0    60   ~ 0
+GE0
+Text Label 6250 4450 0    60   ~ 0
+GA3
+Text Label 6250 4550 0    60   ~ 0
+GA0
+$Comp
+L Led_Small D1
+U 1 1 5890261F
+P 4300 1900
+F 0 "D1" H 4250 2025 50  0000 L CNN
+F 1 "Led_Small" H 4125 1800 50  0000 L CNN
+F 2 "LEDs:LED_0603" V 4300 1900 50  0001 C CNN
+F 3 "" V 4300 1900 50  0000 C CNN
+	1    4300 1900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4300 1800 4300 1650
+Wire Wire Line
+	4300 1650 3950 1650
+Connection ~ 3950 1650
+Wire Wire Line
+	4300 2150 4300 2000
+Connection ~ 3950 2150
+$Comp
+L RTL01-V1 U1
+U 1 1 58903084
+P 4850 4050
+F 0 "U1" H 4850 3950 50  0000 C CNN
+F 1 "RTL01-V1" H 4850 4150 50  0000 C CNN
+F 2 "RTL8710:RTL01-V1" H 4850 4050 50  0001 C CNN
+F 3 "" H 4850 4050 50  0001 C CNN
+	1    4850 4050
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
